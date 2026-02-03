@@ -1,17 +1,15 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 
 class Preferecias {
   static ValueNotifier<Brightness> tema = ValueNotifier(Brightness.light);
   
   static void setTema(){
-    tema.value = WidgetsBinding.instance!.platformDispatcher.platformBrightness;
+    tema.value = WidgetsBinding.instance.platformDispatcher.platformBrightness;
     changeStatusNavigationBar();
   }
 
-  static changeStatusNavigationBar() {
+  static void changeStatusNavigationBar() {
     bool isDark = tema.value == Brightness.dark;
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       statusBarIconBrightness: isDark? Brightness.light : Brightness.dark,

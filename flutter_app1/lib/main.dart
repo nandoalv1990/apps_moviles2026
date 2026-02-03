@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app1/config/preferecias.dart';
 import './src/register_screen.dart';
-import './config/preferecias.dart';
 void main() {
   runApp(const MainApp());
 }
@@ -16,14 +15,14 @@ class MainApp extends StatefulWidget {
 class _MainAppState extends State<MainApp> with WidgetsBindingObserver {
   @override
   void initState() {
-    WidgetsBinding.instance!.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
     Preferecias.setTema();
     super.initState();
   }
 
   @override 
   void dispose(){
-    WidgetsBinding.instance!.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
 
