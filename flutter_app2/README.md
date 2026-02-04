@@ -1,12 +1,15 @@
 ## App flutter 2:
-  
+  - Aplicación estilo IMdb para rating de películas
+     - Acceso básico a imágenes
+      - Uso de Firebase / Firestore para carátulas
+    - 
 
 
 
 
 
 
-
+### Estructura:
   lib/
  ├─ models/
  │   └─ movie_model.dart

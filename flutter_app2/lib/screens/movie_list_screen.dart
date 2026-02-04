@@ -12,16 +12,16 @@ class MovieListScreen extends StatelessWidget {
         onPressed: () {
           Navigator.push(
             context, 
-            MaterialPageRoute(
-              builder: (_) = AddMovieScreen()
+           MaterialPageRoute(
+              builder: (_) => AddMovieScreen()
             ),
           );
         },
       ),
-      body: StreamBuilder<List><Movie>(
-        stream: , 
-        builder: (context,sanpshot){
-
+      body: StreamBuilder<List<Movie>>(
+        stream: null,
+        builder: (context, snapshot) {
+          return const Center(child: Text('No movies'));
         },
       ),
     );
