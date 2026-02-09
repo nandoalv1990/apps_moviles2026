@@ -44,11 +44,13 @@ class _LoginScreenState extends State<LoginScreen> {
               decoration: const InputDecoration(labelText: 'Email'),
             ),
             spacer,
+            // Integrar boton para ver contrasena
             TextField(
               controller: _passCtrl,
               decoration: const InputDecoration(labelText: 'Contrasena'),
               obscureText: true,
             ),
+            // El usuario olvida su contrasena
             spacer,
             ElevatedButton(
               onPressed: _login, 
