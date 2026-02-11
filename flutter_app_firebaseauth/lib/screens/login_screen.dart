@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../services/auth_service.dart';
 import 'register_screen.dart';
+import 'package:flutter/services.dart';
+//import 'package:flutter_login';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -31,6 +33,23 @@ class _LoginScreenState extends State<LoginScreen> {
 
   final spacer = const SizedBox(height: 20.0,);
 
+    Widget _buildForgotPasswordBtn(){
+    return Container(
+      alignment: Alignment.centerRight,
+      child: TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context, 
+                  MaterialPageRoute(
+                    builder: (_) => const RegisterScreen()
+                    ),
+                  );
+              },
+              child: const Text('Crear cuenta'),
+              ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,17 +76,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: const Text('Iniciar seson'),
             ),
             spacer,
-            TextButton(
-              onPressed: () {
-                Navigator.push(
-                  context, 
-                  MaterialPageRoute(
-                    builder: (_) => const RegisterScreen()
-                    ),
-                  );
-              },
-              child: const Text('Crear cuenta'),
-              ),
+            _buildForgotPasswordBtn(),
           ],
         ),
         ),
