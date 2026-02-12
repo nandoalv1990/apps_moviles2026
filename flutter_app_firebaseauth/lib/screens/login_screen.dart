@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../services/auth_service.dart';
 import 'register_screen.dart';
-import 'package:flutter/services.dart';
 //import 'package:flutter_login';
 
 class LoginScreen extends StatefulWidget {
@@ -63,13 +62,13 @@ class _LoginScreenState extends State<LoginScreen> {
               decoration: const InputDecoration(labelText: 'Email'),
             ),
             spacer,
-            // Integrar boton para ver contrasena
+            // Integrar boton para ver contraseña
             TextField(
               controller: _passCtrl,
-              decoration: const InputDecoration(labelText: 'Contrasena'),
+              decoration: const InputDecoration(labelText: 'Contraseña'),
               obscureText: true,
             ),
-            // El usuario olvida su contrasena
+            // El usuario olvida su contraseña
             spacer,
             ElevatedButton(
               onPressed: _login, 
