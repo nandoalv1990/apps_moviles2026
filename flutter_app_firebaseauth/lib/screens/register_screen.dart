@@ -28,6 +28,7 @@ class RegisterScreenState extends State<RegisterScreen> {
   }
   @override
   Widget build(BuildContext context) {
+    // Construir el register screen
     return Container();
   }
 }

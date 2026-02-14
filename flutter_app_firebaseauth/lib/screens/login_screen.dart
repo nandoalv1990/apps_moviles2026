@@ -49,6 +49,37 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
+  Widget _buildLoginBtn (){
+    return Container(
+      alignment: Alignment.topCenter,
+      child: ElevatedButton(
+              onPressed: _login, 
+              child: const Text('Iniciar seson'),
+            ),
+    );
+  }
+
+  Widget _buildEmailTxtf () {
+    return Container(
+      alignment: Alignment.center,
+      child: TextField(
+              controller: _emailCtrl,
+              decoration: const InputDecoration(labelText: 'Email'),
+            ),
+    );
+  }
+
+Widget _buildPasswordTxtf () {
+  return Container(
+    alignment: Alignment.center,
+    child: TextField(
+              controller: _passCtrl,
+              decoration: const InputDecoration(labelText: 'Contraseña'),
+              obscureText: true,
+            ),
+  );
+}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,23 +88,13 @@ class _LoginScreenState extends State<LoginScreen> {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
-            TextField(
-              controller: _emailCtrl,
-              decoration: const InputDecoration(labelText: 'Email'),
-            ),
+            _buildEmailTxtf(),
             spacer,
             // Integrar boton para ver contraseña
-            TextField(
-              controller: _passCtrl,
-              decoration: const InputDecoration(labelText: 'Contraseña'),
-              obscureText: true,
-            ),
+            _buildPasswordTxtf(),
             // El usuario olvida su contraseña
             spacer,
-            ElevatedButton(
-              onPressed: _login, 
-              child: const Text('Iniciar seson'),
-            ),
+            _buildLoginBtn(),
             spacer,
             _buildForgotPasswordBtn(),
           ],
