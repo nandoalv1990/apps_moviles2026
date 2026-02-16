@@ -32,7 +32,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   final spacer = const SizedBox(height: 20.0,);
 
-    Widget _buildForgotPasswordBtn(){
+    Widget _buildRegisterBtn(){
     return Container(
       alignment: Alignment.centerRight,
       child: TextButton(
@@ -96,7 +96,7 @@ Widget _buildPasswordTxtf () {
             spacer,
             _buildLoginBtn(),
             spacer,
-            _buildForgotPasswordBtn(),
+            _buildRegisterBtn(),
           ],
         ),
         ),
