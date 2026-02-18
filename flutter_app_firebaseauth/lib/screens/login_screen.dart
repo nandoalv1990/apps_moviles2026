@@ -69,14 +69,30 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
+final bool _passVisibility = true;  
+
 Widget _buildPasswordTxtf () {
   return Container(
     alignment: Alignment.center,
     child: TextField(
+              key: Key('passw-input'),
+              textInputAction: TextInputAction.done,
               controller: _passCtrl,
+              autofocus: false,
               decoration: const InputDecoration(labelText: 'Contraseña'),
-              obscureText: true,
+              obscureText: _passVisibility,
+              keyboardType: TextInputType.visiblePassword,
             ),
+  );
+}
+
+Widget _buildResetPassBtn () {
+  return Container(
+    alignment: Alignment.bottomCenter,
+    child: TextButton(
+      onPressed: () {}, 
+      child: const Text('Olvidé mi contraseña'),
+    ),
   );
 }
 
@@ -92,7 +108,8 @@ Widget _buildPasswordTxtf () {
             spacer,
             // Integrar boton para ver contraseña
             _buildPasswordTxtf(),
-            // El usuario olvida su contraseña
+            spacer,
+            _buildResetPassBtn(),
             spacer,
             _buildLoginBtn(),
             spacer,
