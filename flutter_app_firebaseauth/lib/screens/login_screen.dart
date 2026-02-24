@@ -15,6 +15,8 @@ class _LoginScreenState extends State<LoginScreen> {
   final _passCtrl = TextEditingController();
   final _auth = AuthService();
 
+  bool _isPasswordVisible = false;
+
   Future<void> _login() async {
     try {
       await _auth.login(
@@ -69,8 +71,6 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-final bool _passVisibility = true;  
-
 Widget _buildPasswordTxtf () {
   return Container(
     alignment: Alignment.center,
@@ -79,8 +79,18 @@ Widget _buildPasswordTxtf () {
               textInputAction: TextInputAction.done,
               controller: _passCtrl,
               autofocus: false,
-              decoration: const InputDecoration(labelText: 'Contraseña'),
-              obscureText: _passVisibility,
+              decoration: InputDecoration(
+                labelText: 'Contraseña',
+                suffixIcon: IconButton(
+                  icon: Icon(_isPasswordVisible ? Icons.visibility_off : Icons.visibility),
+                  onPressed: () {
+                    setState(() {
+                      _isPasswordVisible = !_isPasswordVisible;
+                    });
+                  },
+                ),
+              ),
+              obscureText: !_isPasswordVisible,
               keyboardType: TextInputType.visiblePassword,
             ),
   );
@@ -106,7 +116,6 @@ Widget _buildResetPassBtn () {
           children: [
             _buildEmailTxtf(),
             spacer,
-            // Integrar boton para ver contraseña
             _buildPasswordTxtf(),
             spacer,
             _buildResetPassBtn(),
