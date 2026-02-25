@@ -71,6 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
+// Ocultar / ver contraseña
 Widget _buildPasswordTxtf () {
   return Container(
     alignment: Alignment.center,
