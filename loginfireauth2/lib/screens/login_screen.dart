@@ -56,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
       alignment: Alignment.topCenter,
       child: ElevatedButton(
               onPressed: _login, 
-              child: const Text('Iniciar seson'),
+              child: const Text('Iniciar sesión'),
             ),
     );
   }
