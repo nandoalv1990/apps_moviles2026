@@ -2,7 +2,7 @@
   - Aplicación estilo IMdb para rating de películas
      - Acceso básico a imágenes
       - Uso de Firebase / Firestore para carátulas
-    - 
+      - 
 
 
 

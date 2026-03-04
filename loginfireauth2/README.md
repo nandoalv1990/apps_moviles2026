@@ -1,3 +1,9 @@
 # loginfireauth2
 
-A new Flutter project.
+## Dependencias utilizadas
+  - Firebase:
+     - Fire core
+     - Fire auth
+     - 
+
+### Especificaciones
