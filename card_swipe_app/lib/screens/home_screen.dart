@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../models/card_item.dart';
-import '../widgets/swipe_card.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
