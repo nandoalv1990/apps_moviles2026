@@ -9,6 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  ##flutter_card_swiper: ^7.2.0
+  ##swipeable_card_stack: ^0.0.5
+
 
 dev_dependencies:
   flutter_test:
